@@ -1,15 +1,236 @@
-<aside class="right" aria-hidden="true">
-  <div class="monito" title="Monito cavando">
-    <img src="monito.png" alt="Ilustración de un personaje cavando">
-  </div>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DATALAP — Soluciones tecnológicas</title>
 
-  <div>
-    <div class="caption">Volvemos pronto</div>
-    <div class="sub">Gracias por tu paciencia — estamos mejorando la experiencia.</div>
-  </div>
-</aside>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<div class="footer" aria-hidden="true">
-  <div>Estado: <strong>En mantenimiento</strong></div>
-  <div>Tiempo estimado: <strong>No disponible</strong> (página estática)</div>
-</div>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- SEO / basic -->
+  <meta name="description" content="DATALAP - El partner tecnológico para tu organización. Capacitación, renta de laptops y soporte técnico.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">DATALAP</div>
+      </div>
+
+      <nav class="nav">
+        <a href="#">Servicios</a>
+        <a href="#">Academy</a>
+        <a href="#">Por qué DATALAP</a>
+        <a href="#">Contacto</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Solicitar información</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>El partner tecnológico para tu organización</h1>
+        <p class="lead">
+          Equipamos, preparamos y respaldamos a tus colaboradores con la tecnología y las habilidades analíticas necesarias para alcanzar resultados de impacto.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-outline" href="#contact">Solicitar información</a>
+          <a class="btn btn-light" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-main-img">
+          <img src="assets/hero.jpg" alt="Equipo empresarial">
+        </div>
+        <div class="hero-grid-sm">
+          <img src="assets/hero-grid-1.jpg" alt="">
+          <img src="assets/hero-grid-2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value -->
+  <section class="value container" id="servicios">
+    <h2>Nuestro Valor</h2>
+    <p class="muted">Somos más que un proveedor de servicio. Somos tu partner estratégico para impulsar el crecimiento...</p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Renta de Laptops</h3>
+        <p>Equipos empresariales de alto rendimiento y soporte continuo.</p>
+      </article>
+
+      <article class="card">
+        <h3>DATAlap Academy</h3>
+        <p>Capacitación especializada en Power BI, SQL, Python y más.</p>
+      </article>
+
+      <article class="card">
+        <h3>Soporte Técnico</h3>
+        <p>Respaldo 24/7 y resolución rápida de incidentes.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Product / Feature -->
+  <section class="feature container">
+    <div class="feature-inner">
+      <div class="feature-media">
+        <img src="assets/laptop.jpg" alt="Laptop">
+      </div>
+      <div class="feature-content">
+        <span class="badge">Renta de Equipos</span>
+        <h3>Equipos que impulsan tu productividad</h3>
+        <p>No solo rentamos computadoras. Garantizamos que tus equipos funcionen siempre con soluciones integrales para tu consultoría.</p>
+
+        <ul class="bullet-list">
+          <li>Laptops empresariales de alto rendimiento</li>
+          <li>Configuración personalizada según proyecto</li>
+          <li>Mantenimiento preventivo y correctivo incluido</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academy -->
+  <section class="academy container">
+    <h2>Capacitación y desarrollo para tu personal</h2>
+    <p class="muted">Formación práctica y aplicada para lograr madurez analítica.</p>
+
+    <div class="academy-grid">
+      <div class="pill">Power BI</div>
+      <div class="pill">SQL</div>
+      <div class="pill">Python</div>
+      <div class="pill">Git</div>
+      <div class="pill">Data Analysis</div>
+      <div class="pill">Storytelling con datos</div>
+    </div>
+
+    <div class="programs">
+      <div class="card small">
+        <h4>Ruta Data Analyst DATALAP</h4>
+        <p>Programa modular y certificado.</p>
+      </div>
+      <div class="card small">
+        <h4>Ramp Up Técnico</h4>
+        <p>Onboarding y ramp-up para nuevos talentos.</p>
+      </div>
+      <div class="card small">
+        <h4>Academia Interna</h4>
+        <p>Capacitación personalizada a tu equipo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose -->
+  <section class="why container">
+    <h2>¿Por qué elegir DATALAP?</h2>
+
+    <div class="why-grid">
+      <table class="why-table">
+        <thead>
+          <tr><th>Tipo de empresa</th><th>Cómo te ven normalmente</th><th>Cómo te vemos en DATALAP</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Proveedor de equipos</td><td>"El que renta computadoras"</td><td>"El que garantiza que mis equipos funcionen siempre"</td></tr>
+          <tr><td>Academia</td><td>"Los que dan cursos"</td><td>"Los que convierten a mis juniors en seniors"</td></tr>
+        </tbody>
+      </table>
+
+      <div class="why-cards">
+        <div class="card">
+          <h4>Nuestro Compromiso</h4>
+          <ul>
+            <li>No competimos con tus clientes finales</li>
+            <li>Somos tu partner operativo y formativo</li>
+            <li>Te ayudamos a crecer y entregar más valor</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Público Objetivo</h4>
+          <ul>
+            <li>Socios y managers de consultoras</li>
+            <li>Líderes de proyectos y coordinadores de staffing</li>
+            <li>PYMES del sector tecnología</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact form -->
+  <section class="contact container" id="contact">
+    <h2>Hablemos de tu proyecto</h2>
+    <p class="muted">Déjanos tus datos y un especialista se pondrá en contacto contigo.</p>
+
+    <form class="contact-form" action="#" method="post" onsubmit="submitForm(event)">
+      <div class="row">
+        <input type="text" name="name" placeholder="Nombre completo *" required>
+        <input type="text" name="company" placeholder="Empresa">
+      </div>
+      <div class="row">
+        <input type="email" name="email" placeholder="Email *" required>
+        <input type="tel" name="phone" placeholder="Teléfono">
+      </div>
+
+      <div class="row">
+        <select name="service">
+          <option value="">Selecciona un servicio</option>
+          <option>Renta de equipos</option>
+          <option>Academia</option>
+          <option>Soporte Técnico</option>
+        </select>
+      </div>
+
+      <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto o necesidades..."></textarea>
+
+      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">DATALAP</div>
+        <p>Tu partner tecnológico para consultoras. Equipamos, preparamos y respaldamos a tu equipo.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Servicios</h5>
+          <a href="#">Renta de Laptops</a>
+          <a href="#">DATAlap Academy</a>
+          <a href="#">Soporte Técnico</a>
+        </div>
+
+        <div>
+          <h5>Empresa</h5>
+          <a href="#">Por qué DATALAP</a>
+          <a href="#">Contacto</a>
+        </div>
+
+        <div>
+          <h5>Contacto</h5>
+          <p>contacto@datalap.com</p>
+          <p>+52 55 1234 5678</p>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> DATALAP. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
