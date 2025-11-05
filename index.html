@@ -3,234 +3,187 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DATALAP — Soluciones tecnológicas</title>
+  <title>Página en actualización</title>
+  <style>
+    /* Reset simple */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    :root{
+      --bg1: #0b66b3;
+      --bg2: #0076d6;
+      --card: rgba(255,255,255,0.08);
+      --glass: rgba(255,255,255,0.06);
+      --accent: #fff;
+      --muted: rgba(255,255,255,0.85);
+      --shadow: 0 8px 30px rgba(2,6,23,0.35);
+      font-family: "Inter", "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+    body{
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(120deg,var(--bg1),var(--bg2));
+      color: var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding: 40px;
+    }
 
-  <!-- SEO / basic -->
-  <meta name="description" content="DATALAP - El partner tecnológico para tu organización. Capacitación, renta de laptops y soporte técnico.">
+    .container{
+      width: min(1100px, 94vw);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius: 14px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .left h1{
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .left p{
+      color: var(--muted);
+      margin-bottom: 20px;
+      max-width: 65ch;
+      font-size: 16px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:12px;
+      margin-top: 8px;
+    }
+
+    .btn{
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      color: var(--accent);
+      cursor: default; /* no funciona */
+      user-select: none;
+      box-shadow: 0 6px 16px rgba(2,6,23,0.25);
+      transition: transform .12s ease;
+    }
+
+    .btn:active{ transform: translateY(1px); } /* pequeño efecto al presionar, pero no hace nada */
+
+    .secondary{
+      background: transparent;
+      border: 1px dashed rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.95);
+    }
+
+    .right{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      text-align:center;
+    }
+
+    .monito{
+      width: 260px;
+      height: 260px;
+      background: var(--glass);
+      border-radius: 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.35);
+    }
+
+    .monito img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 18px rgba(2,6,23,0.45));
+    }
+
+    .caption{
+      color: rgba(255,255,255,0.95);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .sub{
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* footer pequeño */
+    .footer{
+      grid-column: 1 / -1;
+      margin-top: 14px;
+      color: rgba(255,255,255,0.65);
+      font-size: 13px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .container{ grid-template-columns: 1fr; text-align:center; }
+      .right{ order: -1; }
+      .monito{ margin: 0 auto; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo">DATALAP</div>
+  <main class="container" role="main" aria-labelledby="title">
+    <section class="left" aria-hidden="false">
+      <h1 id="title">Página en actualización</h1>
+      <p>
+        Estamos haciendo mejoras. La web está temporalmente en mantenimiento y muchas funciones están deshabilitadas.
+        Volveremos pronto con todo funcionando — por ahora, nada de lo que ves en esta página realiza acciones reales.
+      </p>
+
+      <div class="buttons" aria-hidden="true">
+        <div class="btn">Solicitar información</div>
+        <div class="btn secondary">Ver servicios</div>
+      </div>
+    </section>
+
+    <aside class="right" aria-hidden="true">
+      <div class="monito" title="Monito cavando">
+        <!--
+          Reemplaza 'monito.png' por:
+          - si usas la imagen del entorno: /mnt/data/f44e1189-199a-4a23-9057-21cf42ecf0ce.png
+          - o guarda la imagen como monito.png en la misma carpeta
+        -->
+        <img src="monito.png" alt="Ilustración de un personaje cavando" onerror="this.src='data:image/svg+xml;utf8,\
+        <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;260&quot; height=&quot;260&quot; viewBox=&quot;0 0 260 260&quot;>\
+        <rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;rgba(255,255,255,0.03)&quot; rx=&quot;12&quot;/>\
+        <text x=&quot;50%&quot; y=&quot;50%&quot; font-family=&quot;Segoe UI, Roboto, Arial&quot; font-size=&quot;16&quot; fill=&quot;white&quot; text-anchor=&quot;middle&quot; dominant-baseline=&quot;middle&quot;>\
+        Monito cavando\
+        </text></svg>'>
       </div>
 
-      <nav class="nav">
-        <a href="#">Servicios</a>
-        <a href="#">Academy</a>
-        <a href="#">Por qué DATALAP</a>
-        <a href="#">Contacto</a>
-      </nav>
-
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact">Solicitar información</a>
+      <div>
+        <div class="caption">Volvemos pronto</div>
+        <div class="sub">Gracias por tu paciencia — estamos mejorando la experiencia.</div>
       </div>
+    </aside>
+
+    <div class="footer" aria-hidden="true">
+      <div>Estado: <strong>En mantenimiento</strong></div>
+      <div>Tiempo estimado: <strong>No disponible</strong> (página estática)</div>
     </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <h1>El partner tecnológico para tu empresa</h1>
-        <p class="lead">
-          Equipamos, preparamos y respaldamos a tus colaboradores con la tecnología y las habilidades analíticas necesarias para alcanzar resultados de impacto.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-outline" href="#contact">Solicitar información</a>
-          <a class="btn btn-light" href="#servicios">Ver servicios</a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="hero-main-img">
-          <img src="assets/hero.jpg" alt="Equipo empresarial">
-        </div>
-        <div class="hero-grid-sm">
-          <img src="assets/hero-grid-1.jpg" alt="">
-          <img src="assets/hero-grid-2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Value -->
-  <section class="value container" id="servicios">
-    <h2>Nuestro Valor</h2>
-    <p class="muted">Somos más que un proveedor de servicio. Somos tu partner estratégico para impulsar el crecimiento...</p>
-
-    <div class="cards">
-      <article class="card">
-        <h3>Renta de Laptops</h3>
-        <p>Equipos empresariales de alto rendimiento y soporte continuo.</p>
-      </article>
-
-      <article class="card">
-        <h3>DATAlap Academy</h3>
-        <p>Capacitación especializada en Power BI, SQL, Python y más.</p>
-      </article>
-
-      <article class="card">
-        <h3>Soporte Técnico</h3>
-        <p>Respaldo 24/7 y resolución rápida de incidentes.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Product / Feature -->
-  <section class="feature container">
-    <div class="feature-inner">
-      <div class="feature-media">
-        <img src="assets/laptop.jpg" alt="Laptop">
-      </div>
-      <div class="feature-content">
-        <span class="badge">Renta de Equipos</span>
-        <h3>Equipos que impulsan tu productividad</h3>
-        <p>No solo rentamos computadoras. Garantizamos que tus equipos funcionen siempre con soluciones integrales para tu consultoría.</p>
-
-        <ul class="bullet-list">
-          <li>Laptops empresariales de alto rendimiento</li>
-          <li>Configuración personalizada según proyecto</li>
-          <li>Mantenimiento preventivo y correctivo incluido</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academy -->
-  <section class="academy container">
-    <h2>Capacitación y desarrollo para tu personal</h2>
-    <p class="muted">Formación práctica y aplicada para lograr madurez analítica.</p>
-
-    <div class="academy-grid">
-      <div class="pill">Power BI</div>
-      <div class="pill">SQL</div>
-      <div class="pill">Python</div>
-      <div class="pill">Git</div>
-      <div class="pill">Data Analysis</div>
-      <div class="pill">Storytelling con datos</div>
-    </div>
-
-    <div class="programs">
-      <div class="card small">
-        <h4>Ruta Data Analyst DATALAP</h4>
-        <p>Programa modular y certificado.</p>
-      </div>
-      <div class="card small">
-        <h4>Ramp Up Técnico</h4>
-        <p>Onboarding y ramp-up para nuevos talentos.</p>
-      </div>
-      <div class="card small">
-        <h4>Academia Interna</h4>
-        <p>Capacitación personalizada a tu equipo.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why choose -->
-  <section class="why container">
-    <h2>¿Por qué elegir DATALAP?</h2>
-
-    <div class="why-grid">
-      <table class="why-table">
-        <thead>
-          <tr><th>Tipo de empresa</th><th>Cómo te ven normalmente</th><th>Cómo te vemos en DATALAP</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Proveedor de equipos</td><td>"El que renta computadoras"</td><td>"El que garantiza que mis equipos funcionen siempre"</td></tr>
-          <tr><td>Academia</td><td>"Los que dan cursos"</td><td>"Los que convierten a mis juniors en seniors"</td></tr>
-        </tbody>
-      </table>
-
-      <div class="why-cards">
-        <div class="card">
-          <h4>Nuestro Compromiso</h4>
-          <ul>
-            <li>No competimos con tus clientes finales</li>
-            <li>Somos tu partner operativo y formativo</li>
-            <li>Te ayudamos a crecer y entregar más valor</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>Público Objetivo</h4>
-          <ul>
-            <li>Socios y managers de consultoras</li>
-            <li>Líderes de proyectos y coordinadores de staffing</li>
-            <li>PYMES del sector tecnología</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact form -->
-  <section class="contact container" id="contact">
-    <h2>Hablemos de tu proyecto</h2>
-    <p class="muted">Déjanos tus datos y un especialista se pondrá en contacto contigo.</p>
-
-    <form class="contact-form" action="#" method="post" onsubmit="submitForm(event)">
-      <div class="row">
-        <input type="text" name="name" placeholder="Nombre completo *" required>
-        <input type="text" name="company" placeholder="Empresa">
-      </div>
-      <div class="row">
-        <input type="email" name="email" placeholder="Email *" required>
-        <input type="tel" name="phone" placeholder="Teléfono">
-      </div>
-
-      <div class="row">
-        <select name="service">
-          <option value="">Selecciona un servicio</option>
-          <option>Renta de equipos</option>
-          <option>Academia</option>
-          <option>Soporte Técnico</option>
-        </select>
-      </div>
-
-      <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto o necesidades..."></textarea>
-
-      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="logo">DATALAP</div>
-        <p>Tu partner tecnológico para consultoras. Equipamos, preparamos y respaldamos a tu equipo.</p>
-      </div>
-
-      <div class="footer-links">
-        <div>
-          <h5>Servicios</h5>
-          <a href="#">Renta de Laptops</a>
-          <a href="#">DATAlap Academy</a>
-          <a href="#">Soporte Técnico</a>
-        </div>
-
-        <div>
-          <h5>Empresa</h5>
-          <a href="#">Por qué DATALAP</a>
-          <a href="#">Contacto</a>
-        </div>
-
-        <div>
-          <h5>Contacto</h5>
-          <p>contacto@datalap.com</p>
-          <p>+52 55 1234 5678</p>
-        </div>
-      </div>
-    </div>
-    <div class="copyright">© <span id="year"></span> DATALAP. Todos los derechos reservados.</div>
-  </footer>
-
-  <script src="js/main.js"></script>
+  </main>
 </body>
 </html>
