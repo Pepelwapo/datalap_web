@@ -1,236 +1,436 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DATALAP — Soluciones tecnológicas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATALAP | Infraestructura TI & Data Academy</title>
+    
+    <meta name="description" content="Arrendamiento flexible de cómputo y capacitación en Data Analytics.">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- SEO / basic -->
-  <meta name="description" content="DATALAP - El partner tecnológico para tu organización. Capacitación, renta de laptops y soporte técnico.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0F172A',   // Navy Profundo
+                            card: '#1E293B',   // Fondo Tarjetas
+                            accent: '#2563EB', // Azul Eléctrico
+                            success: '#10B981',// Verde Checks
+                        },
+                        text: {
+                            light: '#F8FAFC', // Blanco Hielo
+                            gray: '#94A3B8',  // Gris Azulado
+                            dark: '#1e293b'   // Texto oscuro para fondos blancos
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(37, 99, 235, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo">DATALAP</div>
-      </div>
+<body class="antialiased bg-slate-50">
 
-      <nav class="nav">
-        <a href="#">Servicios</a>
-        <a href="#">Academy</a>
-        <a href="#">Por qué DATALAP</a>
-        <a href="#">Contacto</a>
-      </nav>
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tight">
+                        DATALAP<span class="text-brand-accent">.</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#arrendamiento" class="text-text-gray hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Arrendamiento</a>
+                        <a href="#diferenciales" class="text-text-gray hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Diferenciales</a>
+                        <a href="#academy" class="text-text-gray hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Data Academy</a>
+                    </div>
+                </div>
 
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact">Solicitar información</a>
-      </div>
-    </div>
-  </header>
+                <div class="hidden md:block">
+                    <a href="#contacto" class="bg-white text-brand-dark hover:bg-gray-100 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all transform hover:scale-105 shadow-lg">
+                        Solicitar Cotización
+                    </a>
+                </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <h1>El partner tecnológico para tu organización</h1>
-        <p class="lead">
-          Equipamos, preparamos y respaldamos a tus colaboradores con la tecnología y las habilidades analíticas necesarias para alcanzar resultados de impacto.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-outline" href="#contact">Solicitar información</a>
-          <a class="btn btn-light" href="#servicios">Ver servicios</a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="hero-main-img">
-          <img src="assets/hero.jpg" alt="Equipo empresarial">
-        </div>
-        <div class="hero-grid-sm">
-          <img src="assets/hero-grid-1.jpg" alt="">
-          <img src="assets/hero-grid-2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Value -->
-  <section class="value container" id="servicios">
-    <h2>Nuestro Valor</h2>
-    <p class="muted">Somos más que un proveedor de servicio. Somos tu partner estratégico para impulsar el crecimiento...</p>
-
-    <div class="cards">
-      <article class="card">
-        <h3>Renta de Laptops</h3>
-        <p>Equipos empresariales de alto rendimiento y soporte continuo.</p>
-      </article>
-
-      <article class="card">
-        <h3>DATAlap Academy</h3>
-        <p>Capacitación especializada en Power BI, SQL, Python y más.</p>
-      </article>
-
-      <article class="card">
-        <h3>Soporte Técnico</h3>
-        <p>Respaldo 24/7 y resolución rápida de incidentes.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Product / Feature -->
-  <section class="feature container">
-    <div class="feature-inner">
-      <div class="feature-media">
-        <img src="assets/laptop.jpg" alt="Laptop">
-      </div>
-      <div class="feature-content">
-        <span class="badge">Renta de Equipos</span>
-        <h3>Equipos que impulsan tu productividad</h3>
-        <p>No solo rentamos computadoras. Garantizamos que tus equipos funcionen siempre con soluciones integrales para tu consultoría.</p>
-
-        <ul class="bullet-list">
-          <li>Laptops empresariales de alto rendimiento</li>
-          <li>Configuración personalizada según proyecto</li>
-          <li>Mantenimiento preventivo y correctivo incluido</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academy -->
-  <section class="academy container">
-    <h2>Capacitación y desarrollo para tu personal</h2>
-    <p class="muted">Formación práctica y aplicada para lograr madurez analítica.</p>
-
-    <div class="academy-grid">
-      <div class="pill">Power BI</div>
-      <div class="pill">SQL</div>
-      <div class="pill">Python</div>
-      <div class="pill">Git</div>
-      <div class="pill">Data Analysis</div>
-      <div class="pill">Storytelling con datos</div>
-    </div>
-
-    <div class="programs">
-      <div class="card small">
-        <h4>Ruta Data Analyst DATALAP</h4>
-        <p>Programa modular y certificado.</p>
-      </div>
-      <div class="card small">
-        <h4>Ramp Up Técnico</h4>
-        <p>Onboarding y ramp-up para nuevos talentos.</p>
-      </div>
-      <div class="card small">
-        <h4>Academia Interna</h4>
-        <p>Capacitación personalizada a tu equipo.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why choose -->
-  <section class="why container">
-    <h2>¿Por qué elegir DATALAP?</h2>
-
-    <div class="why-grid">
-      <table class="why-table">
-        <thead>
-          <tr><th>Tipo de empresa</th><th>Cómo te ven normalmente</th><th>Cómo te vemos en DATALAP</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Proveedor de equipos</td><td>"El que renta computadoras"</td><td>"El que garantiza que mis equipos funcionen siempre"</td></tr>
-          <tr><td>Academia</td><td>"Los que dan cursos"</td><td>"Los que convierten a mis juniors en seniors"</td></tr>
-        </tbody>
-      </table>
-
-      <div class="why-cards">
-        <div class="card">
-          <h4>Nuestro Compromiso</h4>
-          <ul>
-            <li>No competimos con tus clientes finales</li>
-            <li>Somos tu partner operativo y formativo</li>
-            <li>Te ayudamos a crecer y entregar más valor</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>Público Objetivo</h4>
-          <ul>
-            <li>Socios y managers de consultoras</li>
-            <li>Líderes de proyectos y coordinadores de staffing</li>
-            <li>PYMES del sector tecnología</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact form -->
-  <section class="contact container" id="contact">
-    <h2>Hablemos de tu proyecto</h2>
-    <p class="muted">Déjanos tus datos y un especialista se pondrá en contacto contigo.</p>
-
-    <form class="contact-form" action="#" method="post" onsubmit="submitForm(event)">
-      <div class="row">
-        <input type="text" name="name" placeholder="Nombre completo *" required>
-        <input type="text" name="company" placeholder="Empresa">
-      </div>
-      <div class="row">
-        <input type="email" name="email" placeholder="Email *" required>
-        <input type="tel" name="phone" placeholder="Teléfono">
-      </div>
-
-      <div class="row">
-        <select name="service">
-          <option value="">Selecciona un servicio</option>
-          <option>Renta de equipos</option>
-          <option>Academia</option>
-          <option>Soporte Técnico</option>
-        </select>
-      </div>
-
-      <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto o necesidades..."></textarea>
-
-      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="logo">DATALAP</div>
-        <p>Tu partner tecnológico para consultoras. Equipamos, preparamos y respaldamos a tu equipo.</p>
-      </div>
-
-      <div class="footer-links">
-        <div>
-          <h5>Servicios</h5>
-          <a href="#">Renta de Laptops</a>
-          <a href="#">DATAlap Academy</a>
-          <a href="#">Soporte Técnico</a>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-text-gray hover:text-white hover:bg-white/10 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div>
-          <h5>Empresa</h5>
-          <a href="#">Por qué DATALAP</a>
-          <a href="#">Contacto</a>
+        <div class="hidden md:hidden bg-brand-dark border-t border-white/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#arrendamiento" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Arrendamiento</a>
+                <a href="#diferenciales" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Diferenciales</a>
+                <a href="#academy" class="text-brand-accent hover:text-white block px-3 py-2 rounded-md text-base font-medium">Data Academy</a>
+                <a href="#contacto" class="bg-white text-brand-dark block px-3 py-2 rounded-md text-base font-bold mt-4 text-center">Solicitar Cotización</a>
+            </div>
         </div>
+    </nav>
 
-        <div>
-          <h5>Contacto</h5>
-          <p>contacto@datalap.com</p>
-          <p>+52 55 1234 5678</p>
+    <header class="relative bg-brand-dark pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-text-light tracking-tight mb-6 leading-tight">
+                Tu proyecto marca los tiempos,<br class="hidden md:block" />
+                <span class="text-brand-accent">no un contrato.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-text-gray mb-10">
+                Transformamos la infraestructura tecnológica en una ventaja competitiva. 
+                Arrendamiento flexible, hardware de gama alta y cero fricción operativa.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contacto" class="bg-brand-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-all shadow-glow flex items-center justify-center gap-2">
+                    Configurar Flota <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#academy" class="border border-text-gray text-text-light px-8 py-4 rounded-lg font-bold text-lg hover:border-white hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+                    Conoce Data Academy <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="copyright">© <span id="year"></span> DATALAP. Todos los derechos reservados.</div>
-  </footer>
+    </header>
 
-  <script src="js/main.js"></script>
+    <section id="arrendamiento" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-brand-dark sm:text-4xl">Beneficios Estratégicos del Arrendamiento</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors">
+                        <i class="fas fa-file-invoice-dollar text-2xl text-brand-accent group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">100% Deducible de Impuestos</h3>
+                    <p class="text-text-dark/70">Optimiza tu carga fiscal. Deducible al 100% como gasto operativo (OPEX).</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow group">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-success transition-colors">
+                        <i class="fas fa-chart-line text-2xl text-brand-success group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Liquidez Intacta (Cero CAPEX)</h3>
+                    <p class="text-text-dark/70">No descapitalices tu empresa. Mantén flujo de efectivo libre para inversiones estratégicas.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors">
+                        <i class="fas fa-sync-alt text-2xl text-purple-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Tecnología Siempre Vigente</h3>
+                    <p class="text-text-dark/70">Renovación automática de flota. Evita la obsolescencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diferenciales" class="py-24 bg-brand-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Por qué las empresas líderes eligen DATALAP?</h2>
+                <p class="text-text-gray text-lg">Solución redefinida / Frente a la vía tecnológica del pasado</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                
+                <div class="p-10 md:w-1/2 border-b md:border-b-0 md:border-r border-gray-100">
+                    <h3 class="text-2xl font-bold mb-8 text-brand-dark">Competencia Tradicional</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-red-100 p-1 rounded-full"><i class="fas fa-times text-red-500 text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-gray-600 font-medium">Plazos forzosos y rígidos.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                             <div class="mt-1 bg-red-100 p-1 rounded-full"><i class="fas fa-times text-red-500 text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-gray-600 font-medium">Equipos de saldo.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                             <div class="mt-1 bg-red-100 p-1 rounded-full"><i class="fas fa-times text-red-500 text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-gray-600 font-medium">Soporte limitado.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                             <div class="mt-1 bg-red-100 p-1 rounded-full"><i class="fas fa-times text-red-500 text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-gray-600 font-medium">Usuarios frustrados.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-10 md:w-1/2 bg-slate-50/50">
+                    <h3 class="text-2xl font-bold mb-8 text-brand-dark">Experiencia DATALAP</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-brand-success/10 p-1 rounded-full"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="font-bold text-brand-dark">Libertad total.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-brand-success/10 p-1 rounded-full"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="font-bold text-brand-dark">Hardware premium.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-brand-success/10 p-1 rounded-full"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="font-bold text-brand-dark">Soporte 24/7 real.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-brand-success/10 p-1 rounded-full"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="font-bold text-brand-dark">Satisfacción garantizada.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academy" class="py-24 bg-brand-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent text-sm font-bold mb-6">
+                        CAPACITACIÓN EXCLUSIVA
+                    </div>
+                    <h2 class="text-4xl font-bold text-white mb-6 leading-tight">
+                        No solo te damos la herramienta. <br>
+                        <span class="text-brand-accent">Te enseñamos a dominarla.</span>
+                    </h2>
+                    
+                    <div class="text-text-gray text-lg mb-8 space-y-6">
+                        <p>
+                            <strong class="text-white">El partner tecnológico para tu organización:</strong> Equipamos, capacitamos y respaldamos a tus colaboradores con la tecnología y las habilidades necesarias para alcanzar resultados de valor.
+                        </p>
+                        <p>
+                            <strong class="text-white">Para Consultoras:</strong> Transformamos a tus perfiles Junior en Senior. Aumenta tu margen de facturación capacitando a tu equipo en las tecnologías más demandadas.
+                        </p>
+                        <p>
+                            <strong class="text-white">Para Empresas:</strong> Convierte a tus operativos en analistas. Capacitación estratégica con casos reales de la industria para potenciar resultados de valor en tus colaboradores la toma de decisiones basada en datos.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-brand-success/10 p-1 rounded-full flex-shrink-0"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-text-gray font-medium">Cursos a la medida de tu industria</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                             <div class="bg-brand-success/10 p-1 rounded-full flex-shrink-0"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-text-gray font-medium">Coaching y Mentoring Ejecutivo</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                             <div class="bg-brand-success/10 p-1 rounded-full flex-shrink-0"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-text-gray font-medium">Retención de Talento Clave</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                             <div class="bg-brand-success/10 p-1 rounded-full flex-shrink-0"><i class="fas fa-check text-brand-success text-sm w-4 h-4 flex items-center justify-center"></i></div>
+                            <span class="text-text-gray font-medium">Resultados medibles y ROI</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-10">
+                        <div class="bg-brand-card p-4 rounded-xl border border-white/5 flex items-center gap-4 hover:border-brand-accent transition-colors cursor-default">
+                            <div class="w-12 h-12 bg-[#F2C811]/20 rounded-lg flex items-center justify-center text-[#F2C811] flex-shrink-0">
+                                <i class="fas fa-chart-bar text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Power BI para Directivos</h4>
+                                <p class="text-sm text-text-gray">Dashboards ejecutivos en 4 semanas.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-card p-4 rounded-xl border border-white/5 flex items-center gap-4 hover:border-brand-accent transition-colors cursor-default">
+                            <div class="w-12 h-12 bg-[#3776AB]/20 rounded-lg flex items-center justify-center text-[#3776AB] flex-shrink-0">
+                                <i class="fab fa-python text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Python para Finanzas</h4>
+                                <p class="text-sm text-text-gray">Automatización de reportes y análisis predictivo.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-card p-4 rounded-xl border border-white/5 flex items-center gap-4 hover:border-brand-accent transition-colors cursor-default">
+                            <div class="w-12 h-12 bg-[#E65100]/20 rounded-lg flex items-center justify-center text-[#E65100] flex-shrink-0">
+                                <i class="fas fa-bullhorn text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Storytelling con Datos</h4>
+                                <p class="text-sm text-text-gray">Presentaciones de impacto con Microstrategy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <blockquote class="border-l-4 border-brand-accent pl-4 italic text-text-gray">
+                        "El activo más valioso no es la computadora, es quien la opera."
+                    </blockquote>
+                </div>
+
+                <div class="relative h-full min-h-[500px] w-full bg-brand-card rounded-2xl overflow-hidden flex items-center justify-center border border-white/10 group lg:sticky lg:top-24">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-card to-slate-900"></div>
+                    <div class="relative z-10 text-center p-6">
+                        <div class="w-24 h-24 bg-brand-accent/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-chalkboard-teacher text-5xl text-brand-accent"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Data Academy en Acción</h3>
+                        <p class="text-text-gray">Sesiones en vivo y on-demand</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm">Nuestros Pilares</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-4 mb-6">Evolución de servicio de arrendamiento y capacitación</h2>
+                <p class="text-text-gray max-w-3xl mx-auto text-lg">No solo rentamos laptops. Somos un aliado estratégico que prepara a tu talento y asegura tu infraestructura.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-accent/50 transition-all group">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:text-brand-accent transition-colors">
+                        <i class="fas fa-unlock-alt text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Libertad Operativa</h4>
+                    <p class="text-text-gray text-sm leading-relaxed">Olvídate de los plazos forzosos. Tu proyecto define la duración. Arrendamiento flexible que escala con tu empresa.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-accent/50 transition-all group">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:text-brand-accent transition-colors">
+                        <i class="fas fa-certificate text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Cero Fricción</h4>
+                    <p class="text-text-gray text-sm leading-relaxed">Continuidad garantizada. Equipos de gama superior y soporte técnico 24/7. Si algo falla, lo resolvemos al instante.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-accent/50 transition-all group">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:text-brand-accent transition-colors">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Inteligencia Financiera</h4>
+                    <p class="text-text-gray text-sm leading-relaxed">Transforma la depreciación en deducción. 100% deducible de impuestos (ISR) para optimizar tu flujo de efectivo.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-accent/30 hover:border-brand-accent transition-all group relative overflow-hidden">
+                    <div class="absolute inset-0 bg-brand-accent/5 pointer-events-none"></div>
+                    <div class="w-12 h-12 bg-brand-accent/20 rounded-lg flex items-center justify-center mb-6 text-brand-accent relative z-10">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4 relative z-10">Data Academy</h4>
+                    <p class="text-text-gray text-sm leading-relaxed relative z-10">Más que hardware. Capacitamos a tu equipo en Análisis de Datos (PowerBI, Python) para potenciar la toma de decisiones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-dark mb-4">Impulsa tu Empresa Ahora</h2>
+                <p class="text-gray-600">Déjanos tus datos. Te contactaremos en menos de 2 horas hábiles.</p>
+            </div>
+
+            <form id="contactForm" class="space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Juan Pérez">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Cargo</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="CTO / Gerente">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Tu Compañía S.A.">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                        <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="+52 55...">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="juan@empresa.com">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Interés Principal</label>
+                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all bg-white">
+                        <option value="arrendamiento">Arrendamiento de Equipos</option>
+                        <option value="capacitacion">Capacitación (Data Academy)</option>
+                        <option value="ambos">Ambos Servicios</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                    <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-dark text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors shadow-lg">
+                    INICIAR CONVERSACIÓN
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-text-gray text-sm">© 2024 DATALAP. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica del Menú Móvil
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        // Validación Básica del Formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'ENVIANDO...';
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+            
+            setTimeout(() => {
+                alert('¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto.');
+                this.reset();
+                btn.innerText = originalText;
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }, 1500);
+        });
+    </script>
 </body>
 </html>
