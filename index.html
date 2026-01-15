@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DATALAP | Arrendamiento de Cómputo Empresarial</title>
-    <!--v3.0 - -->
     <meta name="description" content="Arrendamiento puro de laptops y equipos de cómputo para empresas. Sin plazos forzosos y 100% deducible.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
                     colors: {
                         brand: {
                             dark: '#0F172A',   
@@ -35,12 +30,8 @@
                             dark: '#1e293b'   
                         }
                     },
-                    boxShadow: {
-                        'glow': '0 0 20px rgba(37, 99, 235, 0.3)',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.5s ease-in-out',
-                    },
+                    boxShadow: { 'glow': '0 0 20px rgba(37, 99, 235, 0.3)', },
+                    animation: { 'fade-in': 'fadeIn 0.5s ease-in-out', },
                     keyframes: {
                         fadeIn: {
                             '0%': { opacity: '0', transform: 'translateY(10px)' },
@@ -51,23 +42,18 @@
             }
         }
     </script>
-
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <style> body { font-family: 'Inter', sans-serif; } </style>
 </head>
 <body class="antialiased bg-slate-50">
 
     <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                
                 <div class="flex-shrink-0">
                     <a href="#" class="text-2xl font-bold text-white tracking-tight">
                         DATALAP<span class="text-brand-accent">.</span>
                     </a>
                 </div>
-                
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-8">
                         <a href="#arrendamiento" class="text-text-gray hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Arrendamiento computo</a>
@@ -75,13 +61,11 @@
                         <a href="#comparativa" class="text-text-gray hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Por qué Datalap</a>
                     </div>
                 </div>
-
                 <div class="hidden md:block">
                     <a href="#contacto" class="bg-white text-brand-dark hover:bg-gray-100 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all transform hover:scale-105 shadow-lg">
                         Solicitar Cotización
                     </a>
                 </div>
-
                 <div class="-mr-2 flex md:hidden">
                     <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-text-gray hover:text-white hover:bg-white/10 focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
@@ -104,7 +88,6 @@
 
     <header class="relative bg-brand-dark pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[600px] flex items-center">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20 pointer-events-none"></div>
-        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="relative md:px-20 animate-fade-in text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-text-light tracking-tight mb-6 leading-tight">
@@ -115,11 +98,6 @@
                     Transformamos la infraestructura tecnológica en una ventaja competitiva. 
                     Arrendamiento de laptops empresariales flexible, hardware de gama alta sin CAPEX y sin friccion operativa.
                 </p>
-               <!-- <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#contacto" class="bg-brand-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-all shadow-glow flex items-center justify-center gap-2">
-                        Cotizar Hardware <i class="fas fa-laptop"></i>
-                    </a>
-                </div>-->
             </div>
         </div>
     </header>
@@ -130,7 +108,6 @@
                 <h2 class="text-3xl font-bold text-brand-dark sm:text-4xl">Beneficios Estratégicos del Arrendamiento</h2>
                 <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow group">
                     <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors">
@@ -139,7 +116,6 @@
                     <h3 class="text-xl font-bold text-brand-dark mb-3">100% Deducible de Impuestos</h3>
                     <p class="text-text-dark/70">Optimiza tu carga fiscal. Deducible al 100% como gasto operativo (OPEX), impactando directamente en la utilidad fiscal sin generar activos fijos</p>
                 </div>
-
                 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow group">
                     <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-success transition-colors">
                         <i class="fas fa-chart-line text-2xl text-brand-success group-hover:text-white"></i>
@@ -147,7 +123,6 @@
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Liquidez Intacta (Cero CAPEX)</h3>
                     <p class="text-text-dark/70">No descapitalices tu empresa. Mantén flujo de efectivo libre para inversiones y crecimiento estratégico.</p>
                 </div>
-
                 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow group">
                     <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors">
                         <i class="fas fa-sync-alt text-2xl text-purple-600 group-hover:text-white"></i>
@@ -166,7 +141,6 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-white mt-4 mb-6">La libertad tecnológica que su empresa necesita</h2>
                 <p class="text-text-gray max-w-3xl mx-auto text-lg">Más que un arrendamiento, ¡una ventaja estratégica!</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-accent/50 transition-all group">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:text-brand-accent transition-colors">
@@ -199,9 +173,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">¿Por qué elegir DATALAP?</h2>
                 <p class="text-gray-600 text-lg">Solución redefinida / Frente a la vía tecnológica del pasado</p>
             </div>
-
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-100">
-                
                 <div class="p-10 md:w-1/2 border-b md:border-b-0 md:border-r border-gray-100">
                     <h3 class="text-2xl font-bold mb-8 text-brand-dark">Competencia Tradicional</h3>
                     <ul class="space-y-6">
@@ -223,7 +195,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="p-10 md:w-1/2 bg-slate-50/50">
                     <h3 class="text-2xl font-bold mb-8 text-brand-dark">Experiencia DATALAP</h3>
                     <ul class="space-y-6">
@@ -253,46 +224,44 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-brand-dark mb-4">¡Renueva a tu empresa ahora!</h2>
-                <p class="text-gray-600">Déjenos sus datos y un experto se pondrá en contacto.</p>
+                <p class="text-gray-600">Déjenos sus datos y le responderemos vía WhatsApp al instante.</p>
             </div>
 
-            <form id="contactForm" class="space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+            <form id="whatsappForm" class="space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Nombre">
+                        <input type="text" id="nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Nombre">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Cargo</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="CH / Gerente / TI">
+                        <input type="text" id="cargo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="CH / Gerente / TI">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Tu Organización">
+                        <input type="text" id="empresa" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Tu Organización">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
-                        <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="10 digitos">
+                        <input type="tel" id="telefono" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="10 digitos">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                    <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="correo@empresa.com">
+                    <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="correo@empresa.com">
                 </div>
-
-                <input type="hidden" name="interes" value="arrendamiento">
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
-                    <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Cuéntanos sobre los equipos que necesitas..."></textarea>
+                    <textarea id="mensaje" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all" placeholder="Cuéntanos sobre los equipos que necesitas..."></textarea>
                 </div>
 
-                <button type="submit" class="w-full bg-brand-dark text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors shadow-lg">
-                    INICIAR CONVERSACIÓN
+                <button type="submit" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 rounded-lg transition-colors shadow-lg flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i> ENVIAR POR WHATSAPP
                 </button>
             </form>
         </div>
@@ -315,19 +284,32 @@
             }
         }
 
-        // Manejo del formulario
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            btn.innerText = 'ENVIANDO...';
-            btn.classList.add('opacity-75', 'cursor-not-allowed');
-            setTimeout(() => {
-                alert('¡Gracias! Hemos recibido tu solicitud de cotización. Te contactaremos pronto.');
-                this.reset();
-                btn.innerText = originalText;
-                btn.classList.remove('opacity-75', 'cursor-not-allowed');
-            }, 1500);
+        // --- LÓGICA DE ENVÍO POR WHATSAPP ---
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            // ⚠️ IMPORTANTE: CAMBIA ESTE NÚMERO POR EL TUYO (código país + número)
+            const telefonoDatalap = "528117839874"; 
+
+            const nombre = document.getElementById('nombre').value;
+            const cargo = document.getElementById('cargo').value;
+            const empresa = document.getElementById('empresa').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Construir mensaje formateado
+            const texto = `*Hola DATALAP, buen dia!:*%0A%0A` +
+                          `*Mensaje:*%0A${mensaje}` +
+                          +
+                          `*Nombre:* ${nombre}%0A` +
+                          `*Cargo:* ${cargo}%0A` +
+                          `*Empresa:* ${empresa}%0A` +
+                          `*Tel:* ${telefono}%0A` +   `|`   +
+                          `*Email:* ${email}%0A%0A`;
+
+            const url = `https://wa.me/${telefonoDatalap}?text=${texto}`;
+            window.open(url, '_blank');
         });
     </script>
 </body>
