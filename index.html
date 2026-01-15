@@ -24,10 +24,11 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#0F172A',   // Navy Profundo
+                            dark: '#0F172A',   // Navy Profundo (Hero, Pilares, Footer)
                             card: '#1E293B',   // Fondo Tarjetas
+                            academy: '#162032',// Fondo Academy (Ligeramente más claro que dark)
                             accent: '#2563EB', // Azul Eléctrico
-                            success: '#10B981',// Verde Checks
+                            success: '#10B981',// Verde Checks y Flecha
                         },
                         text: {
                             light: '#F8FAFC', // Blanco Hielo
@@ -37,6 +38,15 @@
                     },
                     boxShadow: {
                         'glow': '0 0 20px rgba(37, 99, 235, 0.3)',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
                     }
                 }
             }
@@ -45,6 +55,26 @@
 
     <style>
         body { font-family: 'Inter', sans-serif; }
+        
+        /* Flecha Derecha */
+        .slider-arrow-right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 20;
+            cursor: pointer;
+        }
+        
+        /* Flecha Izquierda (Nueva) */
+        .slider-arrow-left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 20;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="antialiased bg-slate-50">
@@ -90,25 +120,66 @@
         </div>
     </nav>
 
-    <header class="relative bg-brand-dark pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <header class="relative bg-brand-dark pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[600px] flex items-center">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-text-light tracking-tight mb-6 leading-tight">
-                Tu proyecto marca los tiempos,<br class="hidden md:block" />
-                <span class="text-brand-accent">no un contrato.</span>
-            </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-text-gray mb-10">
-                Transformamos la infraestructura tecnológica en una ventaja competitiva. 
-                Arrendamiento flexible, hardware de gama alta y cero fricción operativa.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contacto" class="bg-brand-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-all shadow-glow flex items-center justify-center gap-2">
-                    Configurar Flota <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#academy" class="border border-text-gray text-text-light px-8 py-4 rounded-lg font-bold text-lg hover:border-white hover:bg-white/5 transition-all flex items-center justify-center gap-2">
-                    Conoce Data Academy <i class="fas fa-graduation-cap"></i>
-                </a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            
+            <div id="hero-slider-container" class="relative md:px-20">
+                
+                <div id="slide-1" class="animate-fade-in block">
+                    <div class="text-center">
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-text-light tracking-tight mb-6 leading-tight">
+                            Tu proyecto marca los tiempos,<br class="hidden md:block" />
+                            <span class="text-brand-accent">no un contrato.</span>
+                        </h1>
+                        <p class="mt-4 max-w-2xl mx-auto text-xl text-text-gray mb-10">
+                            Transformamos la infraestructura tecnológica en una ventaja competitiva. 
+                            Arrendamiento de laptops empresariales flexible, hardware de gama alta sin CAPEX y sin fricción operativa.
+                        </p>
+                      <!-- <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="#contacto" class="bg-brand-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-all shadow-glow flex items-center justify-center gap-2">
+                                Configurar Flota <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#academy" class="border border-text-gray text-text-light px-8 py-4 rounded-lg font-bold text-lg hover:border-white hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+                                Conoce Data Academy <i class="fas fa-graduation-cap"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div id="slide-2" class="animate-fade-in hidden">
+                    <div class="text-center">
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-text-light tracking-tight mb-6 leading-tight">
+                            El partner tecnológico para tu<br class="hidden md:block" />
+                            <span class="text-brand-accent">organización</span>
+                        </h1>
+                        <p class="mt-4 max-w-3xl mx-auto text-xl text-text-gray mb-10 leading-relaxed">
+                            Equipamos, preparamos y respaldamos a tus colaboradores con la tecnología y las habilidades analíticas necesarias para alcanzar resultados de impacto.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="#arrendamiento" class="bg-brand-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-all shadow-glow flex items-center justify-center gap-2">
+                                Información Arrendamiento
+                            </a>
+                            <a href="#academy" class="border border-brand-success text-brand-success px-8 py-4 rounded-lg font-bold text-lg hover:bg-brand-success/10 transition-all flex items-center justify-center gap-2">
+                                Información Data Academy
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="arrow-next" class="slider-arrow-right hidden md:block" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right text-6xl text-brand-success opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"></i>
+                </div>
+                
+                <div id="arrow-prev" class="slider-arrow-left hidden" onclick="nextSlide()">
+                    <i class="fas fa-chevron-left text-6xl text-brand-success opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"></i>
+                </div>
+
+                <div class="md:hidden flex justify-center gap-8 mt-10" onclick="nextSlide()">
+                     <i class="fas fa-exchange-alt text-3xl text-brand-success opacity-80"></i>
+                </div>
+
             </div>
         </div>
     </header>
@@ -204,7 +275,7 @@
         </div>
     </section>
 
-    <section id="academy" class="py-24 bg-brand-dark border-t border-white/5">
+    <section id="academy" class="py-24 bg-brand-academy border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                 
@@ -219,13 +290,10 @@
                     
                     <div class="text-text-gray text-lg mb-8 space-y-6">
                         <p>
-                            <strong class="text-white">El partner tecnológico para tu organización:</strong> Equipamos, capacitamos y respaldamos a tus colaboradores con la tecnología y las habilidades necesarias para alcanzar resultados de valor.
-                        </p>
-                        <p>
                             <strong class="text-white">Para Consultoras:</strong> Transformamos a tus perfiles Junior en Senior. Aumenta tu margen de facturación capacitando a tu equipo en las tecnologías más demandadas.
                         </p>
                         <p>
-                            <strong class="text-white">Para Empresas:</strong> Convierte a tus operativos en analistas. Capacitación estratégica con casos reales de la industria para potenciar resultados de valor en tus colaboradores la toma de decisiones basada en datos.
+                            <strong class="text-white">Para Empresas:</strong> Convierte a tus operativos en analistas. Capacitación estratégica con casos reales de la industria para potenciar la toma de decisiones basada en datos.
                         </p>
                     </div>
 
@@ -412,6 +480,46 @@
                 menu.classList.remove('hidden');
             } else {
                 menu.classList.add('hidden');
+            }
+        }
+
+        // Lógica del Slider Hero con Flechas
+        function nextSlide() {
+            const slide1 = document.getElementById('slide-1');
+            const slide2 = document.getElementById('slide-2');
+            const arrowNext = document.getElementById('arrow-next');
+            const arrowPrev = document.getElementById('arrow-prev');
+
+            // Toggle Slide
+            if (slide1.classList.contains('block')) {
+                // Ir al Slide 2
+                slide1.classList.remove('block');
+                slide1.classList.add('hidden');
+                
+                slide2.classList.remove('hidden');
+                slide2.classList.add('block');
+
+                // Manejo de Flechas: Ocultar Derecha, Mostrar Izquierda
+                arrowNext.classList.remove('md:block'); // Importante para quitar la clase responsive
+                arrowNext.classList.add('hidden');
+                
+                arrowPrev.classList.remove('hidden');
+                arrowPrev.classList.add('md:block');
+
+            } else {
+                // Volver al Slide 1
+                slide2.classList.remove('block');
+                slide2.classList.add('hidden');
+                
+                slide1.classList.remove('hidden');
+                slide1.classList.add('block');
+
+                 // Manejo de Flechas: Mostrar Derecha, Ocultar Izquierda
+                arrowPrev.classList.remove('md:block');
+                arrowPrev.classList.add('hidden');
+
+                arrowNext.classList.remove('hidden');
+                arrowNext.classList.add('md:block');
             }
         }
 
