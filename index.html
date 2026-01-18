@@ -273,44 +273,100 @@
         </div>
     </footer>
 
-    <script>
-        // Lógica del Menú Móvil
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
+<script>
+(function () {
+
+    // ===============================
+    // MENÚ MÓVIL
+    // ===============================
+    window.toggleMenu = function () {
+        document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    };
+
+    // ===============================
+    // WHATSAPP FORM (PC SAFE)
+    // ===============================
+    const form = document.getElementById('whatsappForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const phone = "528117839874";
+        const get = id => document.getElementById(id).value.trim();
+
+        const nombre   = get('nombre');
+        const cargo    = get('cargo');
+        const empresa  = get('empresa');
+        const telefono = get('telefono');
+        const email    = get('email');
+        const mensaje  = get('mensaje');
+
+        // Validación mínima
+        if (!nombre || !telefono || !mensaje) {
+            showMessage("Completa Nombre, Teléfono y Mensaje.", "error");
+            return;
         }
 
-        // --- LÓGICA DE ENVÍO POR WHATSAPP ---
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-            e.preventDefault(); 
+        // Mensaje
+        const text = `
+Hola DATALAP 👋
 
-            // ⚠️ IMPORTANTE: CAMBIA ESTE NÚMERO POR EL TUYO (código país + número)
-            const telefonoDatalap = "528117839874"; 
+Estoy interesado en conocer más sobre sus soluciones de arrendamiento de cómputo.
 
-            const nombre = document.getElementById('nombre').value;
-            const cargo = document.getElementById('cargo').value;
-            const empresa = document.getElementById('empresa').value;
-            const telefono = document.getElementById('telefono').value;
-            const email = document.getElementById('email').value;
-            const mensaje = document.getElementById('mensaje').value;
+🧑 Nombre: ${nombre}
+💼 Cargo: ${cargo || 'N/A'}
+🏢 Empresa: ${empresa || 'N/A'}
+📞 Teléfono: ${telefono}
+📧 Email: ${email || 'N/A'}
 
-            // Construir mensaje formateado
-            const texto = `*Hola DATALAP, buen dia!:*%0A%0A` +
-                          `*Mensaje:*%0A${mensaje}` +
-                          +
-                          `*Nombre:* ${nombre}%0A` +
-                          `*Cargo:* ${cargo}%0A` +
-                          `*Empresa:* ${empresa}%0A` +
-                          `*Tel:* ${telefono}%0A` +   `|`   +
-                          `*Email:* ${email}%0A%0A`;
+📝 Mensaje:
+${mensaje}
+        `.trim();
 
-            const url = `https://wa.me/${telefonoDatalap}?text=${texto}`;
-            window.open(url, '_blank');
-        });
-    </script>
+        const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+
+        // ✅ ABRIR WHATSAPP INMEDIATAMENTE (CLAVE)
+        window.open(url, '_blank');
+
+        // UX posterior (ya no afecta popup)
+        form.reset();
+        lockButton(true);
+        showMessage("Mensaje enviado correctamente. Te contactaremos en breve ✅", "success");
+
+        setTimeout(() => lockButton(false), 1500);
+    });
+
+    // ===============================
+    // HELPERS
+    // ===============================
+    function lockButton(state) {
+        submitBtn.disabled = state;
+        submitBtn.innerHTML = state
+            ? 'Enviado ✓'
+            : '<i class="fab fa-whatsapp text-xl"></i> ENVIAR POR WHATSAPP';
+    }
+
+    function showMessage(text, type) {
+        let box = document.getElementById('form-message');
+
+        if (!box) {
+            box = document.createElement('div');
+            box.id = 'form-message';
+            box.className = 'mb-4 text-sm';
+            form.prepend(box);
+        }
+
+        box.textContent = text;
+        box.className = type === 'success'
+            ? 'mb-4 text-sm text-green-600'
+            : 'mb-4 text-sm text-red-600';
+    }
+
+})();
+</script>
+
+
+
 </body>
 </html>
