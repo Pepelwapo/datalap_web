@@ -276,16 +276,10 @@
 <script>
 (function () {
 
-    // ===============================
-    // MENÚ MÓVIL
-    // ===============================
     window.toggleMenu = function () {
         document.getElementById('mobile-menu')?.classList.toggle('hidden');
     };
 
-    // ===============================
-    // WHATSAPP FORM (PC SAFE)
-    // ===============================
     const form = document.getElementById('whatsappForm');
     const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -302,13 +296,11 @@
         const email    = get('email');
         const mensaje  = get('mensaje');
 
-        // Validación mínima
         if (!nombre || !telefono || !mensaje) {
             showMessage("Completa Nombre, Teléfono y Mensaje.", "error");
             return;
         }
 
-        // Mensaje
         const text = `
 Hola DATALAP 👋
 
@@ -326,10 +318,15 @@ ${mensaje}
 
         const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
 
-        // ✅ ABRIR WHATSAPP INMEDIATAMENTE (CLAVE)
-        window.open(url, '_blank');
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        // UX posterior (ya no afecta popup)
+        // 🔑 UX CORRECTO
+        if (isMobile) {
+            window.location.href = url;   // MISMA PESTAÑA → NO PÁGINA BLANCA
+        } else {
+            window.open(url, '_blank');   // PC → nueva pestaña
+        }
+
         form.reset();
         lockButton(true);
         showMessage("Mensaje enviado correctamente. Te contactaremos en breve ✅", "success");
@@ -337,9 +334,6 @@ ${mensaje}
         setTimeout(() => lockButton(false), 1500);
     });
 
-    // ===============================
-    // HELPERS
-    // ===============================
     function lockButton(state) {
         submitBtn.disabled = state;
         submitBtn.innerHTML = state
@@ -349,14 +343,12 @@ ${mensaje}
 
     function showMessage(text, type) {
         let box = document.getElementById('form-message');
-
         if (!box) {
             box = document.createElement('div');
             box.id = 'form-message';
             box.className = 'mb-4 text-sm';
             form.prepend(box);
         }
-
         box.textContent = text;
         box.className = type === 'success'
             ? 'mb-4 text-sm text-green-600'
@@ -365,6 +357,7 @@ ${mensaje}
 
 })();
 </script>
+
 
 
 
