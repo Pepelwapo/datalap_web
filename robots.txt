@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://datalap.com/sitemap.xml
