@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos propios mínimos (todo lo demás son utilidades Tailwind purgadas) */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+  /* Patrón de puntos del hero (antes inline en bg-[url(...)]) */
+  .hero-dots {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
+  }
+  /* Honeypot anti-spam: fuera de pantalla, no display:none para engañar bots */
+  .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  /* Acordeón FAQ accesible */
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-chevron { transform: rotate(180deg); }
+  .faq-chevron { transition: transform .2s ease; }
+  /* Skip link */
+  .skip-link { position: absolute; left: 0; top: -100px; }
+  .skip-link:focus { top: 0; }
+}
