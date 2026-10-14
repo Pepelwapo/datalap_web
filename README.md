@@ -19,7 +19,7 @@ Sitio estático servido por **GitHub Pages** desde la rama `prd`. Dominio apex `
 
 ### Páginas internas (seo-v4)
 
-Cada carpeta contiene un `index.html` completo con: title ≤ 60, meta description ≤ 155, canonical, OG/Twitter (misma imagen `assets/og-datalap.jpg`), JSON-LD propio (`WebPage` + `BreadcrumbList` + `Service` y/o `FAQPage`), H1 con keyword, breadcrumb visible, bloque "Cómo funciona", bloque "Soporte 24/7 y reemplazo en 24 h", FAQ con `<details>`, formulario → WhatsApp y enlaces internos. **Nav, footer y `<script>` son idénticos en todas las páginas y en la home**: si cambias uno, replica el cambio en los 12 archivos.
+Cada carpeta contiene un `index.html` completo con: title ≤ 60, meta description ≤ 155, canonical, OG/Twitter (misma imagen `assets/og-datalap.jpg`), JSON-LD propio (`WebPage` + `BreadcrumbList` + `Service` y/o `FAQPage`), H1 con keyword, breadcrumb visible, bloque "Cómo funciona", bloque "Atención 24/7 y reemplazo en 24 h", FAQ con `<details>`, formulario → WhatsApp y enlaces internos. **Nav, footer y `<script>` son idénticos en todas las páginas y en la home**: si cambias uno, replica el cambio en los 12 archivos.
 
 | URL | Rol |
 |---|---|
@@ -27,11 +27,11 @@ Cada carpeta contiene un `index.html` completo con: title ≤ 60, meta descripti
 | `/arrendamiento-de-equipo-de-computo-empresas/` | Enfoque fiscal/financiero (OPEX vs CAPEX, deducibilidad ISR, arrendamiento puro vs financiero). |
 | `/renta-de-laptops-por-mes/` | Flexibilidad: por mes, sin plazo forzoso, escalar arriba/abajo. |
 | `/renta-de-laptops-para-proyectos-y-eventos/` | Proyectos temporales, capacitaciones, auditorías, eventos. |
-| `/soporte-24-7-y-reemplazo-en-24-horas/` | Diferenciador: ticket inmediato, diagnóstico de entorno, reemplazo en 24 h. |
+| `/atencion-24-7-y-reemplazo-en-24-horas/` | Diferenciador: ticket inmediato, diagnóstico de entorno, reemplazo en 24 h. |
 | `/preguntas-frecuentes/` | 20 FAQs agrupadas + `FAQPage`. |
 | `/renta-de-laptops-san-pedro-garza-garcia/`, `/renta-de-laptops-apodaca/`, `/renta-de-laptops-guadalupe/`, `/renta-de-laptops-santa-catarina/`, `/renta-de-laptops-san-nicolas-de-los-garza/` | Páginas por municipio con zonas/parques reales y logística propia. |
 
-Reglas editoriales que viven en el contenido (decisión del dueño): **nunca publicar precios ni rangos** (el CTA es siempre "Solicita tu cotización"); horario comercial L–V 9:00–18:00; soporte a usuarios con equipo asignado 24/7 con reemplazo en 24 h; sin razón social, domicilio ni nombres de personas; un solo número (81 2619 4101).
+Reglas editoriales que viven en el contenido (decisión del dueño): **nunca publicar precios ni rangos** (el CTA es siempre "Solicita tu cotización"); horario comercial L–V 9:00–18:00; atención a usuarios con equipo asignado 24/7 con reemplazo en 24 h; sin razón social, domicilio ni nombres de personas; un solo número (81 2619 4101).
 
 ## Build del CSS (obligatorio tras tocar clases en los HTML)
 
