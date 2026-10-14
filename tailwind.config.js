@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // Build: npm run build  (ver README.md). Salida: assets/styles.css (purgado + minificado).
 module.exports = {
-  content: ['./index.html', './404.html', './aviso-de-privacidad.html'],
+  content: ['./*.html', './*/index.html'], // raíz + páginas internas (carpeta/index.html); node_modules no coincide
   theme: {
     extend: {
       fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
