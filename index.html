@@ -59,10 +59,8 @@
     </script>
     -->
 
-    <!-- Datos estructurados (JSON-LD). PENDIENTES DEL DUEÑO:
-         - address: añadir "streetAddress" y "postalCode" (y "geo" lat/long) cuando exista domicilio público; sin ellos
-           LocalBusiness sigue siendo válido pero el Local Pack lo alimenta Google Business Profile, no este schema.
-         - "email": añadir el correo público de Titan (ej. "ventas@datalap.com") cuando se decida cuál publicar.
+    <!-- Datos estructurados (JSON-LD). Por decisión del dueño NO se publica razón social, domicilio ni nombres
+         (sólo sitio, correo y teléfono). El Local Pack lo alimenta Google Business Profile, no este schema.
          - "sameAs": va vacío a propósito; añadir URLs de Google Business Profile, LinkedIn, Facebook, etc. cuando se creen.
          - openingHoursSpecification: L-V 9:00-18:00 es un supuesto razonable; ajustar al horario real. -->
     <script type="application/ld+json">
@@ -80,6 +78,7 @@
       "image": "https://datalap.com/assets/og-datalap.jpg",
       "description": "Renta y arrendamiento de laptops y equipo de cómputo empresarial en Monterrey, Nuevo León. Sin plazos forzosos, 100 % deducible, con soporte de hardware y entorno técnico.",
       "telephone": "+52-81-2619-4101",
+      "email": "contacto@datalap.com",
       "priceRange": "$$",
       "currenciesAccepted": "MXN",
       "paymentAccepted": "Transferencia bancaria",
@@ -806,6 +805,12 @@
                         </a>
                     </li>
 
+                    <!-- Correo -->
+                    <li class="flex items-center text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <a href="mailto:contacto@datalap.com" class="hover:underline">contacto@datalap.com</a>
+                    </li>
+
                     <!-- Horario -->
                     <li class="flex items-center text-gray-400">
                         <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -841,8 +846,7 @@
 
 <script>
 (function () {
-    // DECISIÓN DEL DUEÑO: unificar número. Hoy el sitio público muestra 81 2619 4101 y el formulario
-    // enviaba a 81 1783 9874. Se usa 81 2619 4101 por defecto porque es el que ya está publicado.
+    // Número único de contacto (confirmado por el dueño el 2026-10-14): 81 2619 4101.
     // Formato wa.me: código de país (52) + 10 dígitos, sin "+" ni espacios.
     const WHATSAPP_NUMBER = "528126194101";
 
