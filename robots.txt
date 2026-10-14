@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /node_modules/
-Disallow: /src/
-
 Sitemap: https://datalap.com/sitemap.xml
