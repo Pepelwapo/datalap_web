@@ -7,12 +7,12 @@ Sitio estático servido por **GitHub Pages** desde la rama `prd`. Dominio apex `
 - **Palabra prohibida: «s‑o‑p‑o‑r‑t‑e»** (escrita aquí con guiones para que este README también pase el grep; tampoco el verbo «s‑o‑p‑o‑r‑t‑a»). DATALAP no es eso ni lo hace. El vocabulario correcto es el del brochure: **acompañamiento**, **atención a usuarios**, **mantenimiento**, **reemplazo express**. Antes de commitear: `grep -riE "s[o]port" --include=*.html --include=*.md --include=*.xml .` (sin `node_modules`) debe dar 0.
 - **Alcance real del servicio** (redáctalo así en todas las páginas):
   1. **Cero fricción operativa, día 1:** cada equipo se entrega con imagen corporativa precargada, perfiles de acceso configurados, blindaje BitLocker y gestión de activos desde el primer inicio de sesión. El **entorno crítico** llega listo: librerías, variables de entorno, conectores ODBC, SQL y accesos funcionando. SQL/ODBC/accesos se mencionan **sólo** dentro de esta puesta en marcha.
-  2. **Acompañamiento Hardware & Entorno, 24/7:** puente técnico con el área de TI del cliente; salud del **hardware y del sistema operativo**. Atención por WhatsApp o llamada a usuarios con equipo asignado; ticket abierto al momento ("ticket abierto, solución en camino").
-  3. **Mantenimiento y Reemplazo Express:** mantenimiento preventivo programado y, si un equipo se detiene, **reemplazo en menos de 24 horas** (stock de seguridad, logística local en el área metropolitana de Monterrey).
+  2. **Acompañamiento Hardware & Entorno, en línea:** salud del **hardware y del sistema operativo**, directo con el usuario que tiene el equipo asignado (WhatsApp, llamada o sesión remota). **Frase estándar obligatoria** (puede variar mínimamente la redacción, no el contenido): *"Si el sistema operativo falla, lo corregimos en línea. Si no se puede corregir, sea del sistema operativo o del hardware, dentro de las próximas 24 horas te entregamos el equipo de reemplazo. Todo desde el primer contacto, en línea."* Nadie se desplaza por una falla; a las instalaciones del cliente sólo se va a entregar, recoger o reemplazar equipos. **No se explica la disponibilidad** en la web: nada de "2‑4‑/‑7", "a cualquier h‑o‑r‑a", horarios de atención, m‑a‑d‑r‑u‑g‑a‑d‑a‑s, fines de semana ni turnos; tampoco "t‑i‑c‑k‑e‑t", "en c‑a‑m‑i‑n‑o", "i‑n‑m‑e‑d‑i‑a‑t‑o" ni "p‑u‑e‑n‑t‑e técnico" (escritos aquí con guiones para que este README pase el grep). No repetir "24 horas" dos veces en el mismo párrafo.
+  3. **Mantenimiento y Reemplazo Express:** mantenimiento preventivo programado y, si la falla no se puede corregir en línea, **equipo de reemplazo dentro de las próximas 24 horas** (stock de seguridad, logística local en el área metropolitana de Monterrey).
   4. **Lo que NO se hace** (dilo con claridad y respeto): no se atiende software de negocio, aplicaciones del cliente ni la operación diaria del usuario. Frase de marca: *"Tu software y tu operación son tuyos; el equipo es nuestro: si el sistema operativo o el hardware fallan, entramos nosotros."* / *"Resolvemos el hardware, preservamos tu operación."*
 - **Voz de marca = brochure** (`Datalap - Brochure.pdf`): eslogan "Tu proyecto marca los tiempos, no un contrato."; lema "Nosotros ponemos la tecnología y el riesgo; tú pones el talento y el crecimiento."; pilares financieros "Blindaje de liquidez", "Sin plazos forzosos", "100 % deducible OPEX", "Sin desembolso inicial (sin depósitos, sin rentas anticipadas y sin letras chiquitas)"; pilares operativos "Cero fricción operativa", "Acompañamiento Hardware & Entorno", "Renovación continua". En web se usa siempre **"tú"** (el brochure mezcla tú/usted).
 - **Nunca publicar cifras de renta ni rangos** (ni "$", ni "desde"); el CTA es siempre "Solicita tu cotización".
-- Horario comercial **L–V 9:00–18:00**; acompañamiento a usuarios con equipo asignado **24/7**.
+- Horario comercial **L–V 9:00–18:00** (único horario que se publica; el footer interno dice sólo "Lunes a viernes, 9:00–18:00"). En metas y títulos la fórmula es "acompañamiento en línea y reemplazo en 24 h".
 - Sin razón social, domicilio ni nombres de personas. Un solo contacto: **81 2619 4101** (`WHATSAPP_NUMBER = "528126194101"`) y **contacto@datalap.com**.
 - No inventar modelos exactos: "tipo Dell Latitude / Lenovo ThinkPad / HP EliteBook".
 - **La home es la original del dueño** (commit `af05d42`: hero "Tu proyecto marca los tiempos, no un contrato.", su copy y su diseño). Sólo se le aplican cambios **invisibles** de SEO (JSON-LD, metas, favicons, canonical, número único) más la fila de enlaces del footer. **Conserva Tailwind por CDN en la home**; no la migres al CSS compilado.
@@ -42,7 +42,7 @@ Cada carpeta contiene un `index.html` completo con: title ≤ 60, meta descripti
 | `/arrendamiento-de-equipo-de-computo-empresas/` | Enfoque fiscal/financiero (OPEX vs CAPEX, deducibilidad ISR, arrendamiento puro vs financiero). |
 | `/renta-de-laptops-por-mes/` | Flexibilidad: por mes, sin plazo forzoso, escalar arriba/abajo. |
 | `/renta-de-laptops-para-proyectos-y-eventos/` | Proyectos temporales, capacitaciones, auditorías, eventos. |
-| `/atencion-24-7-y-reemplazo-en-24-horas/` | Diferenciador: acompañamiento hardware & entorno, "Qué sí / Qué no", mantenimiento y reemplazo express en menos de 24 h. (El slug se conserva; el H1 usa la voz del brochure.) |
+| `/atencion-24-7-y-reemplazo-en-24-horas/` | Diferenciador: acompañamiento hardware & entorno en línea, "Qué sí / Qué no", proceso en 3 pasos (nos escribes o llamas → revisamos en línea → reemplazo en 24 h si no se corrige), mantenimiento y reemplazo express. (El slug se conserva; el H1 usa la voz del brochure.) |
 | `/preguntas-frecuentes/` | 20 FAQs agrupadas + `FAQPage`. |
 | `/renta-de-laptops-san-pedro-garza-garcia/`, `/renta-de-laptops-apodaca/`, `/renta-de-laptops-guadalupe/`, `/renta-de-laptops-santa-catarina/`, `/renta-de-laptops-san-nicolas-de-los-garza/` | Páginas por municipio con zonas/parques reales y logística propia. |
 
@@ -69,6 +69,7 @@ python -m http.server 8096
 
 ```bash
 grep -riE "s[o]port" --include=*.html --include=*.md --include=*.xml . | grep -v node_modules   # → 0 resultados
+grep -rniE "24[/]7|las 24 horas los|a cualquier [h]ora|horario [h]ábil|hora [p]rudente|madrug[a]da|en [c]amino|tick[e]t|inmedia[t]|puen[t]e|acudi[m]os" --include=*.html --include=*.md . | grep -v node_modules   # → 0 resultados
 grep -rnE '\$[0-9]|desde \$|pre[c]io' --include=*.html --include=*.md .                         # → 0 resultados
 ```
 
