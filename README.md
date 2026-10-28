@@ -21,7 +21,7 @@ Sitio estático servido por **GitHub Pages** desde la rama `prd`. Dominio apex `
 
 | Archivo | Qué es |
 |---|---|
-| `index.html` | Home original (Tailwind por CDN + Font Awesome). JSON-LD `@graph` en `<head>` (LocalBusiness `#business`, WebSite `#website`, WebPage, Service), metas OG/Twitter y formulario → WhatsApp. Única adición visible: enlaces "Servicios" / "Zonas" en el footer y enlace al aviso de privacidad. |
+| `index.html` | Home original (Tailwind por CDN + Font Awesome). JSON-LD `@graph` en `<head>` (LocalBusiness `#business` con nombre alternativo y logo, WebSite `#website` con nombre alternativo, WebPage, Service), metas OG/Twitter y formulario → WhatsApp. Única adición visible: enlaces "Servicios" / "Zonas" en el footer y enlace al aviso de privacidad. |
 | `aviso-de-privacidad.html` | Aviso de privacidad LFPDPPP (sin razón social ni domicilio por decisión del dueño). |
 | `404.html` | Página de error que GitHub Pages sirve automáticamente; enlaza a las páginas principales. |
 | `<carpeta>/index.html` | Páginas internas con URL limpia (`/carpeta/`). Ver tabla siguiente. |
@@ -39,9 +39,9 @@ Cada carpeta contiene un `index.html` completo con: title ≤ 60, meta descripti
 | URL | Rol |
 |---|---|
 | `/renta-de-laptops-monterrey/` | Página pilar comercial ("renta de laptops Monterrey", "renta de computadoras para empresas Monterrey"). |
-| `/arrendamiento-de-equipo-de-computo-empresas/` | Enfoque fiscal/financiero (OPEX vs CAPEX, deducibilidad ISR, arrendamiento puro vs financiero). |
+| `/arrendamiento-de-equipo-de-computo-empresas/` | Intención de búsqueda “leasing de laptops” y enfoque fiscal/financiero (OPEX vs CAPEX, deducibilidad ISR, arrendamiento puro vs financiero), aclarando que DATALAP ofrece arrendamiento puro operativo y no compra financiada. |
 | `/renta-de-laptops-por-mes/` | Flexibilidad: por mes, sin plazo forzoso, escalar arriba/abajo. |
-| `/renta-de-laptops-para-proyectos-y-eventos/` | Proyectos temporales, capacitaciones, auditorías, eventos. |
+| `/renta-de-laptops-para-proyectos-y-eventos/` | Consultorías, proyectos temporales, capacitaciones, auditorías y eventos; cubre la frase natural “laptops de renta para consultorías”. |
 | `/atencion-24-7-y-reemplazo-en-24-horas/` | Diferenciador: acompañamiento hardware & entorno en línea, "Qué sí / Qué no", proceso en 3 pasos (nos escribes o llamas → revisamos en línea → reemplazo en 24 h si no se corrige), mantenimiento y reemplazo express. (El slug se conserva; el H1 usa la voz del brochure.) |
 | `/preguntas-frecuentes/` | 20 FAQs agrupadas + `FAQPage`. |
 | `/renta-de-laptops-san-pedro-garza-garcia/`, `/renta-de-laptops-apodaca/`, `/renta-de-laptops-guadalupe/`, `/renta-de-laptops-santa-catarina/`, `/renta-de-laptops-san-nicolas-de-los-garza/` | Páginas por municipio con zonas/parques reales y logística propia. |
@@ -69,7 +69,7 @@ python -m http.server 8096
 
 ```bash
 grep -riE "s[o]port" --include=*.html --include=*.md --include=*.xml . | grep -v node_modules   # → 0 resultados
-grep -rniE "24[/]7|las 24 horas los|a cualquier [h]ora|horario [h]ábil|hora [p]rudente|madrug[a]da|en [c]amino|tick[e]t|inmedia[t]|puen[t]e|acudi[m]os" --include=*.html --include=*.md . | grep -v node_modules   # → 0 resultados
+grep -rniE "24[/]7|las 24 [h]oras los|a cualquier [h]ora|horario [h]ábil|hora [p]rudente|madrug[a]da|en [c]amino|tick[e]t|inmedia[t]|puen[t]e|acudi[m]os" --include=*.html --include=*.md . | grep -v node_modules   # → 0 resultados
 grep -rnE '\$[0-9]|desde \$|pre[c]io' --include=*.html --include=*.md .                         # → 0 resultados
 ```
 
